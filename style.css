@@ -1,0 +1,166 @@
+/* font - Noto Sans Korean, Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+
+/* reset */
+* { padding: 0; margin: 0;}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 90px;
+    background: #000;
+
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #707070;
+}
+header .logo{
+    padding-top: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.gnb{
+    background: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0; left: 0;
+    border-bottom: 1px solid #707070;
+    height: 90px;
+    transition: height .2s linear;
+}
+.gnb:hover{
+    height: 360px;
+}
+.gnb::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+    position: absolute;
+    left: 0; top: 90px;
+}
+.gnb > ul{
+    display: flex;
+    overflow: hidden;
+}
+.gnb > ul > li{
+    min-width: 0;
+    transition: min-width 0.3s linear;
+    height: 100%;
+}
+.gnb:hover > ul > li{
+    min-width: 12.5em;
+}
+.gnb > ul > li > a{
+    display: inline-block;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.125em;
+    font-weight: 500;
+    padding: 0 1.6666666667em;
+}
+.gnb > ul > li > ul{
+    border-left: 1px solid #707070;
+    height: calc(100% - 90px);
+    padding: 40px 0;
+    position: relative;
+    box-sizing: border-box;
+}
+.gnb > ul > li:last-child > ul{
+    border-right: 1px solid #707070;
+}
+.gnb > ul > li > ul::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00d67a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.gnb > ul > li:hover > ul::before{
+    opacity: 1;
+}
+
+.gnb > ul > li > ul > li{
+    text-align: center;
+    margin-bottom: 16px;
+}
+.gnb > ul > li > ul > li:last-child{
+    margin-bottom: 0;
+}
+.gnb > ul > li > ul > li > a:hover{
+    color: #00d67a;
+}
+
+.right_menu ul{
+    display: flex;
+}
+.right_menu ul > li{
+    position: relative;
+    padding-right: 10px;
+    margin-right: 15px;
+    color: #999;
+    cursor: pointer;
+}
+.right_menu ul > li:first-child::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #999;;
+    position: absolute;
+    right: -5px; top: 10px;
+}
+.right_menu .login{
+    color: #00d67a;
+}
+
+.ham_menu{
+    display: none;
+}
+
+
+.test{
+    width: 50%;
+    height: 2000px;
+    border: 1px solid yellowgreen;
+    color: #ccc;
+    
+    padding-top: 30px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
